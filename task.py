@@ -110,7 +110,7 @@ async def main(phone):
             total_messages = len(all_messages)
             if total_count_limit != 0 and total_messages >= total_count_limit:
                 with open(jsonname, 'w') as outfile:
-                    json.dump(quiz, outfile)
+                    json.dump(quiz, outfile,indent=2)
                     break
 with client:
     client.loop.run_until_complete(main(phone))
